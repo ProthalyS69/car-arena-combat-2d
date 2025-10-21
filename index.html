@@ -3,37 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Arena Combat 2D</title>
+  <title>Car Arena Combat 2D - Drive Ahead Style</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="ui">
-    <h1>Car Arena Combat 2D</h1>
-    <div class="row">
-      <div>
-        <label>Voiture</label>
-        <select id="carSelect">
-          <option value="basic">Basic</option>
-          <option value="speedster">Speedster</option>
-          <option value="tank">Tank</option>
-        </select>
+  <!-- Interface de jeu style Drive Ahead -->
+  <div id="gameContainer">
+    <!-- Zone d'étoiles en haut -->
+    <div id="starArea">
+      <div id="player1Stars" class="star-container left">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
       </div>
-      <div>
-        <label>Arène</label>
-        <select id="arenaSelect">
-          <option value="classic">Classique</option>
-          <option value="desert">Désert</option>
-          <option value="city">Ville</option>
-        </select>
+      <div id="centerInfo">
+        <div id="timer">3:00</div>
+        <div id="gameStatus">Appuyez sur Démarrer</div>
+      </div>
+      <div id="player2Stars" class="star-container right">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
       </div>
     </div>
-    <div class="row">
-      <button id="startBtn">Démarrer</button>
-      <span class="hint">Contrôles: A/R ou ←/→ (Joueur 1) • Q/D (Joueur 2)</span>
+
+    <!-- Canvas de jeu -->
+    <canvas id="gameCanvas" width="1024" height="576"></canvas>
+
+    <!-- Contrôles tactiles -->
+    <div id="controls">
+      <div class="player-controls left">
+        <button id="p1Left" class="control-btn left-btn">←</button>
+        <button id="p1Right" class="control-btn right-btn">→</button>
+        <button id="p1Pause" class="control-btn pause-btn">⏸</button>
+      </div>
+      
+      <div class="center-controls">
+        <button id="startGame" class="start-btn">DÉMARRER</button>
+        <button id="resetGame" class="reset-btn" style="display:none;">REJOUER</button>
+      </div>
+
+      <div class="player-controls right">
+        <button id="p2Left" class="control-btn left-btn">←</button>
+        <button id="p2Right" class="control-btn right-btn">→</button>
+        <button id="p2Pause" class="control-btn pause-btn">⏸</button>
+      </div>
     </div>
-    <div id="status"></div>
   </div>
-  <canvas id="game" width="960" height="540"></canvas>
+
   <script src="game.js"></script>
 </body>
 </html>
