@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Arena Combat 2D</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="ui">
+    <h1>Car Arena Combat 2D</h1>
+    <div class="row">
+      <div>
+        <label>Voiture</label>
+        <select id="carSelect">
+          <option value="basic">Basic</option>
+          <option value="speedster">Speedster</option>
+          <option value="tank">Tank</option>
+        </select>
+      </div>
+      <div>
+        <label>Arène</label>
+        <select id="arenaSelect">
+          <option value="classic">Classique</option>
+          <option value="desert">Désert</option>
+          <option value="city">Ville</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <button id="startBtn">Démarrer</button>
+      <span class="hint">Contrôles: A/R ou ←/→ (Joueur 1) • Q/D (Joueur 2)</span>
+    </div>
+    <div id="status"></div>
+  </div>
+  <canvas id="game" width="960" height="540"></canvas>
+  <script src="game.js"></script>
+</body>
+</html>
