@@ -7,54 +7,40 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Interface de jeu style Drive Ahead -->
   <div id="gameContainer">
-    <!-- Zone d'étoiles en haut -->
     <div id="starArea">
       <div id="player1Stars" class="star-container left">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
       </div>
       <div id="centerInfo">
         <div id="timer">3:00</div>
         <div id="gameStatus">Appuyez sur Démarrer</div>
       </div>
       <div id="player2Stars" class="star-container right">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        <div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div>
       </div>
     </div>
 
-    <!-- Canvas de jeu -->
-    <canvas id="gameCanvas" width="1024" height="576"></canvas>
+    <canvas id="gameCanvas"></canvas>
 
-    <!-- Contrôles tactiles -->
     <div id="controls">
       <div class="player-controls left">
         <button id="p1Left" class="control-btn left-btn">←</button>
         <button id="p1Right" class="control-btn right-btn">→</button>
-        <button id="p1Pause" class="control-btn pause-btn">⏸</button>
       </div>
-      
       <div class="center-controls">
         <button id="startGame" class="start-btn">DÉMARRER</button>
         <button id="resetGame" class="reset-btn" style="display:none;">REJOUER</button>
       </div>
-
       <div class="player-controls right">
         <button id="p2Left" class="control-btn left-btn">←</button>
         <button id="p2Right" class="control-btn right-btn">→</button>
-        <button id="p2Pause" class="control-btn pause-btn">⏸</button>
       </div>
     </div>
-  </div>
 
+    <!-- Overlay victoire -->
+    <div id="victoryOverlay"><div class="banner" id="victoryText"></div></div>
+  </div>
   <script src="game.js"></script>
 </body>
 </html>
